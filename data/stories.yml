@@ -1,0 +1,61 @@
+version: "3.1"
+
+stories:
+
+- story: Khách hàng hỏi thăm và tìm hiểu sản phẩm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_product_info
+  - action: utter_ask_product_info
+  - intent: ask_price
+  - action: action_get_product_price
+  - intent: ask_shipping
+  - action: utter_ask_shipping
+
+- story: Khách hàng hỏi về khuyến mãi
+  steps:
+  - intent: ask_promotion
+  - action: utter_ask_promotion
+  - intent: ask_price
+  - action: action_get_product_price
+  - intent: ask_shipping
+  - action: utter_ask_shipping
+
+- story: Khách hàng hỏi về phương thức thanh toán
+  steps:
+  - intent: ask_payment
+  - action: utter_ask_payment
+  - intent: ask_shipping
+  - action: utter_ask_shipping
+
+- story: Khách hàng hỏi về giao hàng
+  steps:
+  - intent: ask_shipping
+  - action: utter_ask_shipping
+
+- story: Khách hàng không hài lòng với câu trả lời
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_product_info
+  - action: utter_ask_product_info
+  - intent: deny
+  - action: utter_sorry
+  - action: utter_ask_more_help
+
+- story: Khách hàng kết thúc cuộc trò chuyện
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Khách hàng đồng ý
+  steps:
+  - intent: affirm
+  - action: utter_thank_you
+  - action: utter_follow_up
+
+- story: Khách hàng hỏi thông tin cửa hàng
+  steps:
+  - intent: ask_shop_info
+  - action: utter_ask_shop_info

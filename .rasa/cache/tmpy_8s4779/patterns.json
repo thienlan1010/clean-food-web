@@ -1,0 +1,6 @@
+[
+  {
+    "name": "health_condition",
+    "pattern": "(\\bcao\\ huyết\\ áp\\b|\\btiểu\\ đường\\b|\\bbéo\\ phì\\b|\\bmỡ\\ máu\\ cao\\b|\\bcholesterol\\ cao\\b|\\băn\\ kiêng\\b|\\bgiảm\\ cân\\b|\\btim\\ mạch\\b)"
+  }
+]

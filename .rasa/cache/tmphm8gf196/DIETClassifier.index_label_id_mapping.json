@@ -1,0 +1,18 @@
+{
+  "0": "affirm",
+  "1": "ask_food_for_condition",
+  "2": "ask_food_to_avoid",
+  "3": "ask_if_food_good_for_condition",
+  "4": "ask_payment",
+  "5": "ask_price",
+  "6": "ask_product_detail",
+  "7": "ask_product_info",
+  "8": "ask_promotion",
+  "9": "ask_shipping",
+  "10": "ask_shop_info",
+  "11": "bot_challenge",
+  "12": "deny",
+  "13": "filter_products",
+  "14": "goodbye",
+  "15": "greet"
+}

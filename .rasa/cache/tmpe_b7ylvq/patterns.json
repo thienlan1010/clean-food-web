@@ -1,0 +1,38 @@
+[
+  {
+    "name": "food",
+    "pattern": "(\\bCà\\ chua\\b|\\bTáo\\ ninh\\ thuận\\b|\\bDưa\\ hấu\\b|\\bCà\\ rốt\\b|\\bDâu\\ tây\\b|\\bRau\\ húng\\ quế\\b|\\bDưa\\ lưới\\b|\\bBơ\\ sáp\\b|\\bThịt\\ bò\\b|\\bSữa\\ ốc\\ chó\\b|\\bKem\\ đặc\\ Dutch\\ Lady\\b|\\bLốc\\ sữa\\ ngũ\\ cốc\\ LOF\\b|\\bCua\\ biển\\b|\\bRau\\ cải\\ xanh\\b|\\bThịt\\ heo\\b|\\bThịt\\ heo\\ xay\\b|\\bCá\\ biển\\b|\\bTôm\\b|\\bCá\\ điêu\\ hồng\\b|\\bCá\\ trác\\b|\\bRâu\\ mực\\b|\\bMận\\ đỏ\\b|\\bTrái\\ lê\\b|\\bỨc\\ gà\\b|\\bChân\\ gà\\b|\\bSữa\\ Fami\\b|\\bSữa\\ Vinamilk\\b|\\bLốc\\ sữa\\ tươi\\ chuối\\b|\\bSữa\\ đặc\\b|\\bsữa\\ Milo\\b|\\bsữa\\ ngũ\\ cốc\\b)"
+  },
+  {
+    "name": "product",
+    "pattern": "(\\bCà\\ chua\\b|\\bTáo\\ ninh\\ thuận\\b|\\bDưa\\ hấu\\b|\\bCà\\ rốt\\b|\\bDâu\\ tây\\b|\\bRau\\ húng\\ quế\\b|\\bDưa\\ lưới\\b|\\bBơ\\ sáp\\b|\\bThịt\\ bò\\b|\\bSữa\\ ốc\\ chó\\b|\\bKem\\ đặc\\ Dutch\\ Lady\\b|\\bLốc\\ sữa\\ ngũ\\ cốc\\ LOF\\b|\\bCua\\ biển\\b|\\bRau\\ cải\\ xanh\\b|\\bThịt\\ heo\\b|\\bThịt\\ heo\\ xay\\b|\\bCá\\ biển\\b|\\bTôm\\b|\\bXoài\\b|\\bChuối\\ già\\b|\\bTrái\\ lê\\b|\\bỨc\\ gà\\b|\\bChân\\ gà\\b|\\bSữa\\ Fami\\b|\\bSữa\\ Vinamilk\\b|\\bLốc\\ sữa\\ tươi\\ chuối\\b|\\bSữa\\ đặc\\b|\\bsữa\\ Milo\\b|\\bsữa\\ ngũ\\ cốc\\b)"
+  },
+  {
+    "name": "category",
+    "pattern": "(\\bCà\\ chua\\b|\\bTáo\\ ninh\\ thuận\\b|\\bDưa\\ hấu\\b|\\bThịt\\ heo\\b|\\bThịt\\ gà\\b|\\bCá\\b|\\bCà\\ rốt\\b|\\bRâu\\ mực\\b|\\bRau\\b|\\bHải\\ sản\\b|\\bNho\\b|\\bCánh\\ gà\\b|\\bXương\\ gà\\b|\\bGà\\ dai\\b|\\bTrái\\ lê\\b|\\bỨc\\ gà\\b|\\bChân\\ gà\\b|\\bSữa\\ Fami\\b|\\bSữa\\ Vinamilk\\b|\\bLốc\\ sữa\\ tươi\\ chuối\\b|\\bSữa\\ đặc\\b|\\bsữa\\ Milo\\b|\\bsữa\\ ngũ\\ cốc\\b)"
+  },
+  {
+    "name": "sanpham",
+    "pattern": "(\\bCà\\ chua\\b|\\bTáo\\ ninh\\ thuận\\b|\\bDưa\\ hấu\\b|\\bThịt\\ heo\\b|\\bThịt\\ gà\\b|\\bCá\\b|\\bCà\\ rốt\\b|\\bRâu\\ mực\\b|\\bRau\\b|\\bHải\\ sản\\b|\\bNho\\b|\\bCánh\\ gà\\b|\\bXương\\ gà\\b|\\bGà\\ dai\\b|\\bTrái\\ lê\\b|\\bỨc\\ gà\\b|\\bChân\\ gà\\b|\\bSữa\\ Fami\\b|\\bSữa\\ Vinamilk\\b|\\bLốc\\ sữa\\ tươi\\ chuối\\b|\\bSữa\\ đặc\\b|\\bsữa\\ Milo\\b|\\bsữa\\ ngũ\\ cốc\\b)"
+  },
+  {
+    "name": "tensp",
+    "pattern": "(\\bCà\\ chua\\b|\\bTáo\\ ninh\\ thuận\\b|\\bDưa\\ hấu\\b|\\bThịt\\ heo\\b|\\bThịt\\ gà\\b|\\bCá\\b|\\bCà\\ rốt\\b|\\bRâu\\ mực\\b|\\bRau\\b|\\bHải\\ sản\\b|\\bNho\\b|\\bCánh\\ gà\\b|\\bXương\\ gà\\b|\\bGà\\ dai\\b|\\bTrái\\ lê\\b|\\bỨc\\ gà\\b|\\bChân\\ gà\\b|\\bSữa\\ Fami\\b|\\bSữa\\ Vinamilk\\b|\\bLốc\\ sữa\\ tươi\\ chuối\\b|\\bSữa\\ đặc\\b|\\bsữa\\ Milo\\b|\\bsữa\\ ngũ\\ cốc\\b)"
+  },
+  {
+    "name": "loai",
+    "pattern": "(\\bCà\\ chua\\b|\\bTáo\\ ninh\\ thuận\\b|\\bDưa\\ hấu\\b|\\bThịt\\ heo\\b|\\bThịt\\ gà\\b|\\bCá\\b|\\bCà\\ rốt\\b|\\bRâu\\ mực\\b|\\bRau\\b|\\bHải\\ sản\\b|\\bNho\\b|\\bCánh\\ gà\\b|\\bXương\\ gà\\b|\\bGà\\ dai\\b|\\bTrái\\ lê\\b|\\bỨc\\ gà\\b|\\bChân\\ gà\\b|\\bSữa\\ Fami\\b|\\bSữa\\ Vinamilk\\b|\\bLốc\\ sữa\\ tươi\\ chuối\\b|\\bSữa\\ đặc\\b|\\bsữa\\ Milo\\b|\\bsữa\\ ngũ\\ cốc\\b)"
+  },
+  {
+    "name": "health_condition",
+    "pattern": "(\\bCao\\ huyết\\ áp\\b|\\bBéo\\ phì\\b|\\bMỡ\\ máu\\ cáo\\b|\\bTiểu\\ đường\\b|\\bNgười\\ suy\\ dinh\\ dưỡng\\b|\\bphụ\\ nữ\\ mang\\ thai\\b|\\bTrẻ\\ em\\b|\\bNgười\\ già\\b|\\bBệnh\\ tim\\b|\\bBệnh\\ thận\\b|\\bGiảm\\ cân\\b|\\bTáo\\ bón\\b|\\bĐau\\ dạ\\ dày\\b|\\bTá\\ tràng\\b|\\bBệnh\\ trĩ\\b|\\bPhụ\\ nữ\\ mang\\ thai\\b|\\bMang\\ thai\\b|\\bThiếu\\ máu\\b|\\bNgười\\ ăn\\ chay\\b)"
+  },
+  {
+    "name": "health_advoi",
+    "pattern": "(\\bCao\\ huyết\\ áp\\b|\\bBéo\\ phì\\b|\\bMỡ\\ máu\\ cáo\\b|\\bTiểu\\ đường\\b|\\bNgười\\ suy\\ dinh\\ dưỡng\\b|\\bphụ\\ nữ\\ mang\\ thai\\b|\\bTrẻ\\ em\\b|\\bNgười\\ già\\b|\\bBệnh\\ tim\\b|\\bBệnh\\ thận\\b|\\bGiảm\\ cân\\b|\\bTáo\\ bón\\b|\\bĐau\\ dạ\\ dày\\b|\\bTá\\ tràng\\b|\\bBệnh\\ trĩ\\b|\\bPhụ\\ nữ\\ mang\\ thai\\b|\\bMang\\ thai\\b|\\bThiếu\\ máu\\b|\\bNgười\\ ăn\\ chay\\b)"
+  },
+  {
+    "name": "avoid",
+    "pattern": "(\\bTránh\\b|\\bkiêng\\b|\\bKhông\\ nên\\ ăn\\b)"
+  }
+]

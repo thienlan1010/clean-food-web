@@ -1,0 +1,80 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "ask_food_for_condition": 1,
+        "ask_payment": 2,
+        "ask_price": 3,
+        "ask_product_detail": 4,
+        "ask_product_info": 5,
+        "ask_promotion": 6,
+        "ask_shipping": 7,
+        "ask_shop_info": 8,
+        "back": 9,
+        "bot_challenge": 10,
+        "deny": 11,
+        "filter_products": 12,
+        "goodbye": 13,
+        "greet": 14,
+        "nlu_fallback": 15,
+        "out_of_scope": 16,
+        "restart": 17,
+        "session_start": 18
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_product_price": 13,
+        "action_filter_products": 14,
+        "action_recommend_food_by_condition": 15,
+        "utter_ask_health_condition": 16,
+        "utter_ask_more_help": 17,
+        "utter_ask_payment": 18,
+        "utter_ask_product_detail": 19,
+        "utter_ask_product_info": 20,
+        "utter_ask_promotion": 21,
+        "utter_ask_shipping": 22,
+        "utter_ask_shop_info": 23,
+        "utter_follow_up": 24,
+        "utter_goodbye": 25,
+        "utter_greet": 26,
+        "utter_iamabot": 27,
+        "utter_sorry": 28,
+        "utter_thank_you": 29
+      },
+      "entities": {
+        "category": 0,
+        "comparison_operator": 1,
+        "health_condition": 2,
+        "price": 3,
+        "product": 4
+      },
+      "slots": {
+        "product_0": 0,
+        "category_0": 1,
+        "price_0": 2,
+        "price_1": 3,
+        "comparison_operator_0": 4,
+        "health_condition_0": 5
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

@@ -1,0 +1,63 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "ask_payment": 1,
+        "ask_price": 2,
+        "ask_product_info": 3,
+        "ask_promotion": 4,
+        "ask_shipping": 5,
+        "back": 6,
+        "bot_challenge": 7,
+        "deny": 8,
+        "goodbye": 9,
+        "greet": 10,
+        "nlu_fallback": 11,
+        "out_of_scope": 12,
+        "restart": 13,
+        "session_start": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_product_price": 13,
+        "utter_ask_more_help": 14,
+        "utter_ask_payment": 15,
+        "utter_ask_product_detail": 16,
+        "utter_ask_product_info": 17,
+        "utter_ask_promotion": 18,
+        "utter_ask_shipping": 19,
+        "utter_follow_up": 20,
+        "utter_goodbye": 21,
+        "utter_greet": 22,
+        "utter_iamabot": 23,
+        "utter_sorry": 24,
+        "utter_thank_you": 25
+      },
+      "entities": {
+        "product": 0
+      },
+      "slots": {
+        "product_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

@@ -1,0 +1,604 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hey
+    - hello
+    - Hi
+    - Xin chào
+    - Chào buổi sáng
+    - Chào bạn
+    - Chào
+    - Chào buổi chiều
+    - Chào buổi tối
+    - Shop ơi
+    - Cửa hàng ơi
+    - Ê shop ơi
+    - Alo shop
+    - Hi shop
+    - Mình cần tư vấn
+    - Cho mình hỏi chút
+
+- intent: goodbye
+  examples: |
+    - bye
+    - tạm biệt
+    - ngủ ngon
+    - goodbye
+    - Hẹn gặp lại
+    - Bye shop
+    - Bye cửa hàng
+    - Chào tạm biệt
+
+- intent: affirm
+  examples: |
+    - Đúng rồi
+    - Yes
+    - Chính xác
+    - Chuẩn luôn bro
+    - Phải
+    - OK nhá
+    - Đồng ý
+    - Chuẩn
+
+- intent: deny
+  examples: |
+    - Không
+    - Không phải
+    - Không đúng
+    - Không thích
+    - Tôi không cần
+    - Không phải đâu
+    - Mình không muốn
+
+- intent: ask_product_info
+  examples: |
+    - Xem thông tin sản phẩm ở đâu?
+    - Làm sao để xem thông tin sản phẩm?
+    - Tôi muốn xem chi tiết sản phẩm thì làm sao?
+    - Cách xem thông tin sản phẩm thế nào?
+    - Tôi muốn tìm hiểu về sản phẩm thì xem ở đâu?
+
+- intent: ask_product_detail
+  examples: |
+    - Xem chi tiết ở đâu?
+    - Tôi muốn xem chi tiết sản phẩm
+    - Có thể xem thông tin chi tiết không?
+
+
+- intent: bot_challenge
+  examples: |
+    - Bạn là AI à?
+    - Bạn có phải là chatbot không?
+    - Tôi đang nói chuyện với con người hay máy tính?
+    - Shop có phải là người thật không?
+    - Bạn là người thật hay bot?
+    - Bạn là AI hay con người?
+
+- intent: ask_payment
+  examples: |
+    - Tôi có thể thanh toán bằng những phương thức nào?
+    - Cửa hàng hỗ trợ thanh toán qua thẻ không?
+    - Có hỗ trợ thanh toán bằng Momo không?
+
+
+- intent: ask_promotion
+  examples: |
+    - Có chương trình khuyến mãi nào không?
+    - Shop có giảm giá gì không?
+    - Mua nhiều có được ưu đãi gì không?
+
+- intent: ask_shipping
+  examples: |
+    - Thời gian giao hàng là bao lâu?
+    - Phí ship bao nhiêu?
+    - Tôi có thể chọn đơn vị vận chuyển không?
+
+- intent: ask_price
+  examples: |
+    - [Dưa lưới](product) bao nhiêu tiền?
+    - [Bắp cải](product) giá bao nhiêu?
+    - Giá của [thịt heo](product) là bao nhiêu?
+    - [Gà nguyên con](product) có giá thế nào?
+    - Cho hỏi [Cá biển](product) giá sao?
+    - [Sữa tươi](product) bao nhiêu?
+    - [Khoai tây](product) giá thế nào?
+    - Cho tôi hỏi [Cà chua](product) giá nhiêu?
+    - [Trứng gà](product) có giá bao nhiêu?
+    - [Lốc sữa Ovaltine](product) bán bao nhiêu?
+    - [Sữa đặc có đường](product) bao nhiêu vậy?
+    - Cho xin giá cua [Cá Cam](product)
+    - [Cá Hú](product) giá nhiêu?
+    - [Cá Lóc làm sạch](product) nay giá bao nhiêu?
+    - [cá nục](product) giá hôm nay là bao nhiêu?
+    - Nay [cá điều hồng](product) có giá sao?
+    - Hôm nay [Cá ba sa cắt khúc](product) giá ra sao?
+    - [Thịt heo ba rội](product) bao nhiêu 1 bịch vậy?
+    - [Xương heo](product) có giá như nào?
+    - [Thịt heo xay](product) có giá sao?
+    - [Đường mía](product) có mắc không?
+    - Giá của [Thùng sữa kun trái cây](product) là bao nhiêu?
+    - Một thùng [sữa Dutch Lady dâu](product) có giá bao nhiêu?
+    - [Thùng sữa kun vị dâu](product) bán sao vậy em??
+    - Một ký [xoài tứ quý](product) bao nhiêu?
+    - [ức gà](product) giá đắt như nào?
+    - Cho chị hỏi [chuối già](product) giá nhiêu?
+    - Cho mình xin giá [Cà rốt](product)
+    - Giá hiện tại của [Dưa hấu](product) là bao nhiêu?
+    - [Cải ngọt] giá bao nhiêu 1 bó vậy?
+    - [Cải bẹ xanh](product) bao nhiêu 1 bó?
+    - Bữa nay bán [Lốc 4 hộp sữa bắp non](product) giá sao?
+    - Bữa nay bán [Cải bó xôi](product) nhiêu vậy?
+    - Hôm nay [rau húng quế](product) giá bao nhiêu?
+    - [Trái quýt](product) giờ nhiêu tiền vậy?
+    - Giá [ổi ruột đỏ](product) sao rồi?
+    - Giá 1kg [nho xanh](product) là bao nhiêu vậy?
+    - [Cải bó xôi](product) hiện tại bên mình bán nhiêu?
+    - [Rau râm](product) có lên giá không em?
+
+
+- intent: ask_shop_info
+  examples: |
+    - Số điện thoại của cửa hàng là?
+    - Địa chỉ của cửa hàng
+# hỏi về danh muc giá cao thấp
+- intent: filter_products
+  examples: |
+    - Tôi muốn mua [trái cây](category) [rẻ hơn](comparison_operator) [15000](price)
+    - Có bán [sữa](category) giá [dưới](comparison_operator) [50000](price) không?
+    - Có [rau](category) nào giá [dưới](comparison_operator) [10000](price) không?
+    - Có [rau](category) nào giá [trên](comparison_operator) [10000](price) không?
+    - Có [cải bẹ xanh](category) nào có giá [dưới](comparison_operator) [10000](price) không?
+    - Có [cải thìa](category) nào có giá [trên](comparison_operator) [10000](price) không?
+    - Các loại [trái cây](category) nào có giá [rẻ hơn](comparison_operator) [30000](price)?
+    - [táo](category) có loại nào [dưới](comparison_operator) [15000](price) không?
+    - [Bơ sáp](category) [dưới](comparison_operator) [30000](price)
+    - [Thịt bò](category) nào [dưới](comparison_operator) [20000](price)
+    - [Sữa tươi](category) giá [dưới](comparison_operator) [10000](price)
+    - [Kem đặc](category) có giá [dưới](comparison_operator) [20000](price)
+    - [Sữa lúa mạch](category) có giá [dưới](comparison_operator) [10000](price)
+    - Có loại [Bắp cải](category) nào [dưới](comparison_operator) [10000](price) không?
+    - Tôi đang tìm [mận đỏ](category) [rẻ hơn](comparison_operator) [20000](price)
+    - Em muốn tìm [dầu gội](category) [dưới](comparison_operator) [100000](price)
+    - [Thanh long](category) nào [cao hơn](comparison_operator) [20000](price)?
+    - [Trái lê](category) có loại nào giá [trên](comparison_operator) [40000](price) không?
+    - Có [Xoài](category) [trên](comparison_operator) [30000](price)?
+    - [Ức gà](category) có giá [trên](comparison_operator) [30000](price)
+    - Có [Thịt gà](category) nào có giá [dưới](comparison_operator) [30000](price)
+    - Có [Thịt](category) nào có giá [trên](comparison_operator) [30000](price)
+    - Có [cua](category) nào có giá [dưới](comparison_operator) [30000](price)
+    - Có [cá](category) nào có giá [trên](comparison_operator) [30000](price)
+    - Có [cá](category) nào có giá [dưới](comparison_operator) [30000](price)
+    - Mình cần tìm [trái cây](category) giá dưới [15000](price), có không?
+    - Có sản phẩm [thịt gà](category) nào rẻ hơn [25000](price)?
+    - Tôi muốn mua [cá hồi](category) dưới [40000](price), có gợi ý nào không?
+    - Cho tôi xem các sản phẩm [sữa tươi](category) giá dưới [40000](price)
+    - Gợi ý giúp tôi một số loại [trái cây](category) dưới [30000](price)
+    - Những loại [rau](category) nào hiện có giá thấp hơn [10000](price)?
+    - Loại [hải sản](category) nào trên [30000](price)?
+    - Cho tôi xin danh sách [thịt heo](category) nào giá trên [30000](price) với ạ
+    - Hệ thống có thể gợi ý các loại [trái cây](category) rẻ hơn [20000](price) không?
+    - Có [trái cây](category) nào dưới [10000](price) không?
+    - Có loại [cá](category) nào dưới [10000](price) không?
+    - Bạn có những loại [trái cây](category) nào trên [10000](price) không?
+
+#hỏi về thể trạng
+- intent: ask_food_for_condition
+  examples: |
+    - Tôi bị [cao huyết áp](health), nên ăn gì?
+    - Có thực phẩm nào tốt cho người bị [tiểu đường](health) không?
+    - Người [mỡ máu cao](health) nên ăn thực phẩm nào?
+    - Gợi ý thực phẩm phù hợp với người [béo phì](health)
+    - Tôi đang muốn [giảm cân](health), nên chọn sản phẩm nào?
+    - Có thực phẩm nào hỗ trợ [giảm mỡ](health) không?
+    - Tôi đang [ăn kiêng](health), nên ăn món nào?
+    - Bị [bệnh tim](health) nên ăn gì?
+    - Thực phẩm nào an toàn cho người bị bệnh [mỡ máu cao](health)?
+    - Tôi cần tư vấn thực phẩm phù hợp với [phụ nữ mang thai](health)
+    - Bạn có thể gợi sản phẩm nào tốt cho người [suy dinh dưỡng](health) không?
+    - Tôi bị [thiếu máu](health), nên bổ sung thực phẩm gì?
+    - Người [gầy yếu](health) nên ăn gì để cải thiện thể trạng?
+    - Có sản phẩm nào tốt cho người đang [mang thai](health) không?
+    - Thực phẩm nào phù hợp cho người bị [rối loạn tiêu hóa](health)?
+    - Tôi đang bị [gan nhiễm mỡ](health), nên ăn uống thế nào?
+    - Gợi ý món ăn giúp cải thiện tình trạng [thiếu máu](health).
+    - Có thực phẩm nào giúp tăng cân cho người [gầy yếu](health) không?
+    - Với người bị [bệnh tim](health) thì nên ăn gì?
+    - Thực phẩm nào phù hợp với [người già](health)?
+    - Tôi bị [viêm đại tràng](health), có món nào phù hợp không?
+    - Nên ăn gì nếu đang bị [gout](health)?
+    - Tôi đang điều trị [cao huyết áp](health), nên chọn thực phẩm nào?
+    - Thực phẩm nào hỗ trợ cải thiện tình trạng [tiểu đường](health)?
+    - tôi bị [bệnh thận](health) thì nên chọn sản phẩm nào?
+    - Muốn [giảm cân](health) thì chọn sản phẩm nào bạn?
+    - Có sản phẩm nào cho người [tiểu đường](health) không?
+    - Có sản phẩm nào cho [phụ nữ mang thai](health) không?
+    
+  # sp có phù hợp với thể trạng
+- intent: ask_if_food_good_for_condition
+  examples: |
+    - [Cà chua](food) có phù hợp cho người bị [bệnh tim](health_condition) không?
+    - Người bị [tiểu đường](health_condition) có ăn được [chuối](food) không?
+    - [Trứng gà](food) có phù hợp cho người [cao huyết áp](health_condition) không?
+    - [Thịt bò](food) có phù hợp cho [người gầy](health_condition) không?
+    - [Thịt bò](food) có phù hợp với [người vận động nhiều](health_condition) không?
+    - [Rau cải xanh](food) có tốt cho [phụ nữ mang thai](health_condition) không?
+    - [Nho](food) có phù hợp với người [mỡ máu cao](health_condition) không?
+    - [Trứng vịt](food) có phù hợp với [trẻ em](health_condition) không?
+    - [Sữa fami](food) có lợi cho [người già](health_condition) không?
+    - [Táo](food) có phải là lựa chọn tốt cho người [bệnh tim](health_condition) không?
+    - [Tôm](food) có tốt cho [trẻ em](health_condition) không?
+    - [Trái quýt](food) có tốt cho người [béo phì](health_condition) không?
+    - [Cá hồi](food) có phải là lựa chọn phù hợp với [phụ nữ mang thai](health_condition) không?
+    - [Cá điêu hồng](food) có hợp với người [giảm cân](health_condition) không?
+    - [Ức gà](food) có tốt cho [suy dinh dưỡng](health_condition) không?
+    - [Bắp cải](food) có thích hợp với người [tiểu đường](health_condition) không?
+    - [Râu mực](food) có hỗ trợ người muốn [giảm cân](health_condition) không?
+    - [Sữa milo](food) có thích hợp cho [trẻ em](health_condition) không?
+    - [Trẻ em](health_condition) có phù hợp với [cà chua](food) không?
+    - [sữa ngũ cốc](food) có phù hợp với [người già](health_condition) không?
+    - Bị [đau dạ dày](health_condition) có ăn được [khóm](food) không?
+    - Người bị [bệnh tim](health_condition) có ăn được [thịt bò](food) không?
+    - Người đang [ăn kiêng](health_condition) có được ăn [thịt heo ba rội](food) không?
+
+#thể trạng tránh thực phẩm gì?
+- intent: ask_food_to_avoid
+  examples: |
+    - Người bị [tiểu đường](health_advoi) cần [tránh](avoid) những món gì?
+    - Thực phẩm nào [không tốt](avoid) cho người [mỡ máu cao](health_advoi)?
+    - Người [béo phì](health_advoi) nên [kiêng](avoid) gì?
+    - Khi đang [ăn kiêng](health_advoi) thì nên [tránh](avoid) món nào?
+    - Có món nào [không nên](avoid) ăn khi bị [gan nhiễm mỡ](health_advoi)?
+    - Tôi bị [cao huyết áp](health_advoi), cần [tránh](avoid) thực phẩm nào?
+    - Người [béo phì](health_advoi) nên [kiêng](avoid) những món nào?
+    - Tôi đang [mang thai](health_advoi), có cần [tránh](avoid) thực phẩm nào không?
+    - Bị [rối loạn tiêu hóa](health_advoi) nên [tránh](avoid) món gì?
+    - Tôi bị [mỡ gan](health_advoi), có nên [kiêng](avoid) đồ chiên rán không?
+    - Người bị [viêm khớp](health_advoi) có nên [tránh](avoid) ăn hải sản không?
+   
+#hỏi có bán sp A khong
+- intent: ask_co_ban_sp
+  examples: |
+    - Có bán [cà chua](sanpham) không?
+    - Bên bạn có bán [trứng gà](sanpham) không?
+    - Ở đây có bán [táo](sanpham) không?
+    - Có [cá hồi](sanpham) không vậy?
+    - Shop có bán [dâu tây](sanpham) không?
+    - Bên mình có [rau muống](sanpham) không nhỉ?
+    - Cửa hàng có [thịt heo](sanpham) không?
+    - Cho hỏi có [bắp cải](sanpham) không?
+    - Ở đây có bán [cá basa](sanpham) không?
+    - Có [chuối](sanpham) không bạn?
+    - Còn bán [rau cải xanh](sanpham) không?
+    - Tôi cần mua [thịt bò](sanpham), bên bạn có không?
+    - Có [sữa tươi](sanpham) không shop?
+    - Có [cà rốt](sanpham) không?
+    - Có [dưa lưới](sanpham) không thế?
+    - Có còn bán [trái bơ](sanpham) không bạn?
+    - Bên bạn có [sữa tươi](sanpham) không?
+    - Cho mình hỏi có bán [bơ sáp](sanpham) không?
+    - Bạn có [nho mỹ](sanpham) không nhỉ?
+    - Mình đang tìm [hành lá](sanpham), bên bạn có không?
+    - Cửa hàng có [sữa đặc](sanpham) không?
+    - Mình đang tìm mua [cá biển](sanpham), có không bạn?
+    - [dưa lưới](sanpham) có bán không bạn?
+    - [Sườn heo non](sanpham) bạn có bán không?
+    - [Xương heo](sanpham) có bán không vậy?
+    - Có [trứng cút](sanpham) không?
+    - [Mận đỏ] có bán hong?
+
+#Có bán loại sản phẩm nào
+- intent: ask_co_loai_nao
+  examples: |
+    - Ở đây có bán những loại [rau](loai) nào vậy?
+    - Có những loại [cá](loai) nào?
+    - Cho mình hỏi có những loại [hải sản](loai) nào đang bán?
+    - Có những loại [trứng](loai) nào đang có không?
+    - Ở đây có bán những sữa [mì](loai) nào thế?
+    - Mình muốn biết có những loại [trái cây](loai) nào?
+    - Có những loại [thịt heo](loai) gì ở cửa hàng?
+    - Bên bạn có những loại [sữa](loai) nào?
+    - Mình cần mua [rau](loai), có những loại nào vậy?
+    - Có những loại [sữa đặc](loai) nào?
+    - Có những loại [thịt heo](loai) nào?
+    - Có những loại [thịt bò](loai) nào?
+    - Có những loại [trứng](loai) nào?
+    - Có những loại [trứng gà](loai) nào?
+    - Ở đây có bán những loại [trái cây](loai) nào vậy?
+    - Có những loại [củ quả](loai) nào đang có không?
+    - Có các loại [nho](loai) nào ở đây không?
+    - Cho mình xin danh sách các loại [sữa](loai) đang có nhé
+    - Các loại [rau củ](loai) nào đang được bán vậy bạn?
+    - Cửa hàng có bao nhiêu loại [rau](loai)?
+    - Bạn có thể cho mình biết các loại [hải sản](loai) đang có không?
+    - Hiện có các loại [sữa tươi](loai) nào đang bán vậy?
+    - Bạn có những loại [cá](loai) nào?
+    - Bạn có những loại [trái cây](loai) nào?
+    - Bạn có những loại [thịt gà](loai) nào?
+    - Bạn có những loại [thịt heo](loai) nào?
+    - Bạn có những loại [thịt bò](loai) nào?
+    - Bạn có những loại [hải sản](loai) nào?
+    - Bạn có những loại [củ quả](loai) nào?
+    - Bạn có những loại [sữa](loai) nào?
+    - Bạn có những loại [sữa đặc](loai) nào?
+    - Bạn có những loại [trứng](loai) nào?
+    - Có bán những loại [cà chua](loai) nào vậy?
+    - Có bán [rau](loai) gì?
+    - Có bán [sữa](loai) gì?
+    - Có bán [trái cây](loai) gì?
+    - Có bán [cá](loai) gì?
+    - Có bán [rau ngót](loai) gì?
+
+
+#hỏi còn hàng không
+- intent: ask_con_hang_ko
+  examples: |
+    - Còn sản phẩm [cà chua](tensp) không?
+    - [dâu tây] còn hàng không vậy?
+    - [bí đỏ](tensp) còn không?
+    - Cho hỏi [cải ngọt](tensp) còn không?
+    - Shop còn [dưa hấu](tensp) không?
+    - [khoai tây](tensp) còn hàng không?
+    - Còn bán [mướp đắng](tensp) không?
+    - Còn [xoài](tensp) không nhỉ?
+    - [cam](tensp) còn không vậy?
+    - Bây giờ còn [bắp cải](tensp) không bạn?
+    - [Bơ](tensp) còn hàng không bạn?
+    - [Sữa óc chó](tensp) có còn hàng không
+    - Bên bạn còn [cam sành](tensp) không?
+    - [Táo](tensp) có còn hàng không nhỉ?
+    - Có còn [dưa hấu](tensp) không?
+    - Còn [dưa lưới](tensp) không?
+    - Giờ này còn [bắp cải](tensp) không bạn?
+    - Giờ này còn [bắp cải](tensp) không bạn?
+    - Giờ còn [trứng cút](tensp) không?
+    - [táo](tensp) còn hàng không bạn?
+    - Còn [thịt gà] không?
+    - Còn [bơ sáp] không?
+    - Hôm nay có [sữa óc chó] chưa?
+    - Có [sữa đặc] chưa vậy?
+    - Còn [hành lá] không vậy?
+    - Còn [rau đắng] không vậy?
+
+
+#hỏi sp A có thể trạng nào
+- intent: ask_sp_phuhop_thetrang_nao
+  examples: |
+    - [Cà chua](food) phù hợp với những thể trạng nào?
+    - [Dưa lưới](food) có thể trạng nào phù hợp
+    - [Bí đỏ](food) hợp với những người có tình trạng sức khỏe nào?
+    - [Rau muống](food) nên dùng cho những thể trạng nào?
+    - [Cá hồi](food) phù hợp với người như thế nào?
+    - [Xoài](food) tốt cho thể trạng nào?
+    - [Nho](food) có tốt cho thể trạng nào?
+    - [Cá hú](food) có tốt cho những thể trạng nào?
+    - [Nho](food) tot cho nhung the trang nao?
+    - [Ca chua](food) phu hop voi nhung the trang nao?
+    - [Dua luoi](food) co the trang nao phu hop
+    - [Bi do](food) hop voi nhung nguoi co tinh trang suc khoe nao?
+    - [Rau muong](food) nen dung cho nhung the trang nao?
+    - [Ca hoi](food) phu hop voi nguoi nhu the nao?
+    - [Xoai](food) tot cho the trang nao?
+    - [Nho](food) tot cho nhung the trang nao?
+    - [thịt bò](food) hợp với thể trạng gì?
+    - [Cải thìa](food) có phù hợp với những thể trạng gì?
+    - [Râu mực] phù hợp thể trạng nào?
+
+
+
+- lookup: food
+  examples: |
+    - Cà chua
+    - Táo ninh thuận
+    - Dưa hấu
+    - Cà rốt
+    - Dâu tây
+    - Rau húng quế
+    - Dưa lưới
+    - Bơ sáp
+    - Thịt bò
+    - Sữa ốc chó
+    - Kem đặc Dutch Lady
+    - Lốc sữa ngũ cốc LOF
+    - Cua biển
+    - Rau cải xanh
+    - Thịt heo
+    - Thịt heo xay
+    - Cá biển
+    - Tôm
+    - Cá điêu hồng
+    - Cá trác
+    - Râu mực
+    - Mận đỏ
+    - Trái lê
+    - Ức gà
+    - Chân gà
+    - Sữa Fami
+    - Sữa Vinamilk
+    - Lốc sữa tươi chuối
+    - Sữa đặc
+    - sữa Milo
+    - sữa ngũ cốc
+
+- lookup: product
+  examples: |
+    - Cà chua
+    - Táo ninh thuận
+    - Dưa hấu
+    - Cà rốt
+    - Dâu tây
+    - Rau húng quế
+    - Dưa lưới
+    - Bơ sáp
+    - Thịt bò
+    - Sữa ốc chó
+    - Kem đặc Dutch Lady
+    - Lốc sữa ngũ cốc LOF
+    - Cua biển
+    - Rau cải xanh
+    - Thịt heo
+    - Thịt heo xay
+    - Cá biển
+    - Tôm
+    - Xoài
+    - Chuối già
+    - Trái lê
+    - Ức gà
+    - Chân gà
+    - Sữa Fami
+    - Sữa Vinamilk
+    - Lốc sữa tươi chuối
+    - Sữa đặc
+    - sữa Milo
+    - sữa ngũ cốc
+
+- lookup: category
+  examples: |
+    - Cà chua
+    - Táo ninh thuận
+    - Dưa hấu
+    - Thịt heo
+    - Thịt gà
+    - Cá
+    - Cà rốt
+    - Râu mực
+    - Rau
+    - Hải sản
+    - Nho
+    - Cánh gà
+    - Xương gà
+    - Gà dai
+    - Trái lê
+    - Ức gà
+    - Chân gà
+    - Sữa Fami
+    - Sữa Vinamilk
+    - Lốc sữa tươi chuối
+    - Sữa đặc
+    - sữa Milo
+    - sữa ngũ cốc
+- lookup: sanpham
+  examples: |
+    - Cà chua
+    - Táo ninh thuận
+    - Dưa hấu
+    - Thịt heo
+    - Thịt gà
+    - Cá
+    - Cà rốt
+    - Râu mực
+    - Rau
+    - Hải sản
+    - Nho
+    - Cánh gà
+    - Xương gà
+    - Gà dai
+    - Trái lê
+    - Ức gà
+    - Chân gà
+    - Sữa Fami
+    - Sữa Vinamilk
+    - Lốc sữa tươi chuối
+    - Sữa đặc
+    - sữa Milo
+    - sữa ngũ cốc
+- lookup: tensp
+  examples: |
+    - Cà chua
+    - Táo ninh thuận
+    - Dưa hấu
+    - Thịt heo
+    - Thịt gà
+    - Cá
+    - Cà rốt
+    - Râu mực
+    - Rau
+    - Hải sản
+    - Nho
+    - Cánh gà
+    - Xương gà
+    - Gà dai
+    - Trái lê
+    - Ức gà
+    - Chân gà
+    - Sữa Fami
+    - Sữa Vinamilk
+    - Lốc sữa tươi chuối
+    - Sữa đặc
+    - sữa Milo
+    - sữa ngũ cốc
+- lookup: loai
+  examples: |
+    - Cà chua
+    - Táo ninh thuận
+    - Dưa hấu
+    - Thịt heo
+    - Thịt gà
+    - Cá
+    - Cà rốt
+    - Râu mực
+    - Rau
+    - Hải sản
+    - Nho
+    - Cánh gà
+    - Xương gà
+    - Gà dai
+    - Trái lê
+    - Ức gà
+    - Chân gà
+    - Sữa Fami
+    - Sữa Vinamilk
+    - Lốc sữa tươi chuối
+    - Sữa đặc
+    - sữa Milo
+    - sữa ngũ cốc
+- lookup: health_condition
+  examples: |
+    - Cao huyết áp
+    - Béo phì
+    - Mỡ máu cáo
+    - Tiểu đường
+    - Người suy dinh dưỡng
+    - phụ nữ mang thai
+    - Trẻ em
+    - Người già
+    - Bệnh tim
+    - Bệnh thận
+    - Giảm cân
+    - Táo bón
+    - Đau dạ dày
+    - Tá tràng
+    - Bệnh trĩ
+    - Phụ nữ mang thai
+    - Mang thai
+    - Thiếu máu
+    - Người ăn chay
+
+- lookup: health_advoi
+  examples: |
+    - Cao huyết áp
+    - Béo phì
+    - Mỡ máu cáo
+    - Tiểu đường
+    - Người suy dinh dưỡng
+    - phụ nữ mang thai
+    - Trẻ em
+    - Người già
+    - Bệnh tim
+    - Bệnh thận
+    - Giảm cân
+    - Táo bón
+    - Đau dạ dày
+    - Tá tràng
+    - Bệnh trĩ
+    - Phụ nữ mang thai
+    - Mang thai
+    - Thiếu máu
+    - Người ăn chay
+
+- lookup: avoid
+  examples: |
+    - Tránh
+    - kiêng
+    - Không nên ăn

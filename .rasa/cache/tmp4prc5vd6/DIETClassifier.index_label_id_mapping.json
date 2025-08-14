@@ -1,0 +1,21 @@
+{
+  "0": "affirm",
+  "1": "ask_co_ban_sp",
+  "2": "ask_co_loai_nao",
+  "3": "ask_con_hang_ko",
+  "4": "ask_food_for_condition",
+  "5": "ask_food_to_avoid",
+  "6": "ask_if_food_good_for_condition",
+  "7": "ask_payment",
+  "8": "ask_price",
+  "9": "ask_product_detail",
+  "10": "ask_product_info",
+  "11": "ask_promotion",
+  "12": "ask_shipping",
+  "13": "ask_shop_info",
+  "14": "bot_challenge",
+  "15": "deny",
+  "16": "filter_products",
+  "17": "goodbye",
+  "18": "greet"
+}

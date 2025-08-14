@@ -1,0 +1,173 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_product_info
+  - ask_product_detail
+  - ask_price
+  - bot_challenge
+  - ask_promotion
+  - ask_payment
+  - ask_shipping
+  - ask_shop_info
+  - filter_products
+  - ask_food_for_condition
+  - ask_if_food_good_for_condition
+  - ask_food_to_avoid
+  - ask_co_ban_sp
+  - ask_co_loai_nao
+  - ask_con_hang_ko
+  - ask_sp_phuhop_thetrang_nao
+
+entities:
+  - product
+  - category     
+  - price
+  - comparison_operator
+  - health_condition
+  - food
+  - health_advoi
+  - avoid
+  - sanpham
+  - loai
+  - tensp
+  - health
+slots:
+  product:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product
+  category:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: category
+  price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: price
+  comparison_operator:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: comparison_operator
+  health_condition:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: health_condition
+  food:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: food
+  
+  health_advoi:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: health_advoi
+
+  avoid:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: avoid
+
+  sanpham:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sanpham
+  
+  loai:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: loai
+
+  tensp:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tensp
+
+  health:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: health
+actions:
+  - action_get_product_price
+  - action_filter_products
+  - action_recommend_food_by_condition
+  - action_recommend_food
+  - action_food_to_avoid
+  - action_co_ban_sp
+  - action_loai_sp
+  - action_con_hang
+  - action_sp_phuhop_thetrang_nao
+
+responses:
+  utter_greet:
+    - text: "Xin chào! Bạn đang quan tâm đến sản phẩm nào ạ?"
+    - text: "Mình có thể giúp bạn tìm kiếm sản phẩm. Bạn muốn tìm sản phẩm nào ạ?"
+
+  utter_goodbye:
+    - text: "Cảm ơn bạn đã ghé thăm! Hẹn gặp lại nhé!"
+    - text: "bye bạn"
+    - text: "Tạm biệt bạn"
+    - text: "hẹn gặn lại lần sau"
+
+  utter_ask_product_info:
+    - text: "Bạn có thể tìm kiếm sản phẩm trên thanh tìm kiếm của website và nhấn vào sản phẩm để xem chi tiết nhé!"
+
+  utter_ask_product_detail:
+    - text: "Bạn có thể xem chi tiết sản phẩm trên trang sản phẩm hoặc nhấn vào từng sản phẩm để xem chi tiết nhé!"
+
+  utter_ask_promotion:
+    - text: "Hiện tại shop chưa có chương trình khuyến mãi. Bạn chờ đợt khuyến mãi sắp tới nhé!"
+
+  utter_iamabot:
+    - text: "Tôi là chatbot hỗ trợ tư vấn sản phẩm, mình có thể giúp gì cho bạn ạ?"
+
+  utter_ask_payment:
+    - text: "Cửa hàng hỗ trợ các phương thức thanh toán sau: tiền mặt, chuyển khoản và ví điện tử như Momo, ZaloPay."
+    - text: "Bạn có thể thanh toán qua tiền mặt, thẻ ngân hàng hoặc ví điện tử."
+    - text: "Dạ, shop có hỗ trợ thanh toán qua Momo, tiền mặt và chuyển khoảng"
+
+  utter_ask_shipping:
+    - text: "Thời gian giao hàng thường từ 1-2h tùy vào khu vực của bạn."
+    - text: "Phí ship sẽ dựa vào trọng lượng đơn hàng và khoảng cách giao ạ. Bạn có thể vào phí ship ở phần chân trang để xem chi tiết."
+    - text: "Dạ, do bên cửa hàng chỉ nhân viên giao thôi ạ, nên không có dịch vụ chọn đơn vị vẫn chuyển ạ"
+
+  utter_sorry:
+    - text: "Xin lỗi, tôi chưa hiểu câu hỏi của bạn."
+    - text: "Mình chưa tìm thấy thông tin bạn cần. Bạn có thể thử hỏi theo cách khác không?"
+    - text: "Bạn có thể hỏi theo cách khác không, tui chưa hiểu lắm"
+
+  utter_ask_more_help:
+    - text: "Bạn có cần tư vấn thêm về sản phẩm không?"
+    - text: "Bạn có cần giúp đỡ thêm không?"
+
+  utter_thank_you:
+    - text: "Cảm ơn bạn đã sử dụng dịch vụ của shop! Chúc bạn một ngày vui vẻ!"
+    - text: "Cảm ơn bạn đã ghé thăm! Nếu cần hỗ trợ gì, cứ nhắn cho mình nhé!"
+    - text: "Cảm ơn bạn! Mình có thể giúp gì thêm không?"
+  
+  utter_follow_up:
+    - text: "Bạn đang quan tâm đến sản phẩm nào khác không?"
+    - text: "Bạn có muốn xem thêm các ưu đãi khác của shop không?"
+    - text: "Nếu bạn đang tìm kiếm sản phẩm theo nhu cầu, mình có thể gợi ý thêm cho bạn!"
+
+  utter_ask_shop_info:
+    - text: "Số điện thoại: 0985632413, Email: Paionus@gmail.com, Địa chỉ: 123A, Quận 7, TP. Hồ Chí Minh"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

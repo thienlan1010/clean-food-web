@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-category",
+      "2": "I-category",
+      "3": "L-category",
+      "4": "U-category",
+      "5": "B-comparison_operator",
+      "6": "I-comparison_operator",
+      "7": "L-comparison_operator",
+      "8": "U-comparison_operator",
+      "9": "B-health_condition",
+      "10": "I-health_condition",
+      "11": "L-health_condition",
+      "12": "U-health_condition",
+      "13": "B-price",
+      "14": "I-price",
+      "15": "L-price",
+      "16": "U-price",
+      "17": "B-product",
+      "18": "I-product",
+      "19": "L-product",
+      "20": "U-product",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-category": 1,
+      "I-category": 2,
+      "L-category": 3,
+      "U-category": 4,
+      "B-comparison_operator": 5,
+      "I-comparison_operator": 6,
+      "L-comparison_operator": 7,
+      "U-comparison_operator": 8,
+      "B-health_condition": 9,
+      "I-health_condition": 10,
+      "L-health_condition": 11,
+      "U-health_condition": 12,
+      "B-price": 13,
+      "I-price": 14,
+      "L-price": 15,
+      "U-price": 16,
+      "B-product": 17,
+      "I-product": 18,
+      "L-product": 19,
+      "U-product": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

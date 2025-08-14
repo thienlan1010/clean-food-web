@@ -1,0 +1,93 @@
+version: "3.1"
+
+rules:
+
+- rule: Chào khi người dùng chào
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Chào tạm biệt khi người dùng nói lời tạm biệt
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Xác nhận chatbot là AI khi người dùng hỏi
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Hướng dẫn khách xem thông tin sản phẩm 
+  steps:
+  - intent: ask_product_info
+  - action: utter_ask_product_info
+
+- rule: Trả lời khi khách hỏi về chi tiết sản phẩm
+  steps:
+  - intent: ask_product_detail
+  - action: utter_ask_product_detail
+
+- rule: Trả lời khi người dùng hỏi về khuyến mãi
+  steps:
+  - intent: ask_promotion
+  - action: utter_ask_promotion
+
+- rule: Trả lời khi người dùng hỏi về phí ship
+  steps:
+  - intent: ask_shipping
+  - action: utter_ask_shipping
+
+- rule: Trả lời khi người dùng hỏi về phương thức thanh toán
+  steps:
+  - intent: ask_payment
+  - action: utter_ask_payment
+
+- rule: Trả lời khi khách hàng hỏi giá sản phẩm
+  steps:
+  - intent: ask_price
+  - action: action_get_product_price
+
+- rule: trả lời khi hỏi thông tin về cửa hàng
+  steps:
+  - intent: ask_shop_info
+  - action: utter_ask_shop_info
+
+- rule: trả lời khi hỏi danh mục sản phẩm
+  steps:
+  - intent: filter_products
+  - action: action_filter_products
+
+- rule: trả lời khi hỏi về thể trạng
+  steps:
+  - intent: ask_food_for_condition
+  - action: action_recommend_food_by_condition
+
+- rule: trả lời khi hỏi về sản phẩm phù hợp thể trạng
+  steps:
+  - intent: ask_if_food_good_for_condition
+  - action: action_recommend_food
+
+- rule: trả lời khi hỏi về sản phẩm không phù hợp với thể trạng
+  steps:
+  - intent: ask_food_to_avoid
+  - action: action_food_to_avoid
+
+- rule: trả lời khi hỏi về có bán sản phẩm A ko
+  steps:
+  - intent: ask_co_ban_sp
+  - action: action_co_ban_sp
+
+- rule: trả lời khi hỏi về loại sản phẩm
+  steps:
+  - intent: ask_co_loai_nao
+  - action: action_loai_sp
+
+- rule: trả lời khi hỏi về còn hàng không
+  steps:
+  - intent: ask_con_hang_ko
+  - action: action_con_hang
+
+- rule: trả lời khi hỏi sản phẩm phù hợp với những thể trạng nào
+  steps:
+  - intent: ask_sp_phuhop_thetrang_nao
+  - action: action_sp_phuhop_thetrang_nao
