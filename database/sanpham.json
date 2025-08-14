@@ -1,0 +1,30 @@
+[
+  {
+    "ten": "Gạo lứt",
+    "donvi": "kg",
+    "gia": 20000,
+    "dinh_duong": {
+      "calo": 360,
+      "chat_dam": 7.5,
+      "chat_beo": 2.2,
+      "chat_xo": 3.4,
+      "duong": 0.9
+    },
+    "che_do_phu_hop": ["giảm cân", "tiểu đường", "mỡ máu cao", "cao huyết áp"],
+    "che_do_can_tranh": ["rối loạn tiêu hóa nặng"]
+  },
+  {
+    "ten": "Yến mạch",
+    "donvi": "gói",
+    "gia": 30000,
+    "dinh_duong": {
+      "calo": 380,
+      "chat_dam": 11.6,
+      "chat_beo": 6.9,
+      "chat_xo": 8.0,
+      "duong": 1.2
+    },
+    "che_do_phu_hop": ["giảm cân", "người già", "trẻ em", "bà bầu", "cao huyết áp"],
+    "che_do_can_tranh": []
+  }
+]
