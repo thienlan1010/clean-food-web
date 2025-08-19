@@ -11,7 +11,8 @@ function layTenPhuong($phuong_id) {
 }
 
 function get_coordinates($address) {
-    $apiKey = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImFkNmNjNzljNzMxMDRkNTM4OGU0ODM4MjY1Y2U4ODM4IiwiaCI6Im11cm11cjY0In0=';
+    // $apiKey = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImFkNmNjNzljNzMxMDRkNTM4OGU0ODM4MjY1Y2U4ODM4IiwiaCI6Im11cm11cjY0In0=';
+    $apiKey ='eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImFkNmNjNzljNzMxMDRkNTM4OGU0ODM4MjY1Y2U4ODM4IiwiaCI6Im11cm11cjY0In0=';
     $url = "https://api.openrouteservice.org/geocode/search?api_key=$apiKey&text=" . urlencode($address);
     $response = file_get_contents($url);
     $data = json_decode($response, true);

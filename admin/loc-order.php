@@ -275,7 +275,7 @@
                             </button>
                         </form>
                         <!-- BỘ LỌC -->
-                        <p>Lộc theo trạng thái</p>
+                        <p>Lọc theo trạng thái</p>
                             <form method="GET" action="index.php" class="filter-form" style="margin-bottom: 15px;">
                                 <input type="hidden" name="act" value="list_dh">
                                 <select name="idstatus" onchange="this.form.submit()" class="form-select" style="min-width: 150px;">
@@ -298,7 +298,9 @@
                             return true;
                         }
                     </script>
-                    <table>
+                     <?php 
+                            if(isset($dh) && (count($dh) > 0)){//>1 tức có dl 
+                echo'    <table>
                         <tr class="text-center">
                                 <th>STT</th>  
                                 <th>Mã DH</th>                          
@@ -310,9 +312,8 @@
                                 <th>Hành động</th>
 
 
-                        </tr>
-                        <?php 
-                            if(isset($dh) && (count($dh) > 0)){//>1 tức có dl 
+                        </tr>';
+                       
                                 $i=1;
                                 foreach ($dh as $d) {
                                     echo '<tr class="text-center mb-2">

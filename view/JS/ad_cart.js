@@ -88,7 +88,7 @@ function thevaogiohang(btn) {
     sessionStorage.setItem('giohang', JSON.stringify(giohang));
     show_sl_sp();
     //alert('Đã thêm "' + tensp + '" vào giỏ hàng với số lượng: ' + soluong);
-    alert("Đã thêm vào giỏ hàng:))");
+    alert("Đã thêm vào giỏ hàng");
 }
 
 

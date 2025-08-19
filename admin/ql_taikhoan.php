@@ -375,7 +375,7 @@
                     </form>
 
                     <!-- BỘ LỌC -->
-                    <p>Lộc tài khoản</p>
+                    <p>Lọc tài khoản</p>
                     <form method="GET" action="index.php" class="filter-form" style="margin-bottom: 15px;">
                         <input type="hidden" name="act" value="list_taikhoan">
                         <select name="role" onchange="this.form.submit()" class="form-select" style="min-width: 150px;">

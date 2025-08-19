@@ -125,7 +125,7 @@ function search_product_by_keyword($kyw) {
             )
         ) dg_new ON sp.SP_MASP = dg_new.SP_MASP
         WHERE dm.DM_TRANGTHAI = 'Còn kinh doanh'
-        AND sp.SP_TENSP LIKE :kyw";
+        AND LOWER(sp.SP_TENSP) LIKE LOWER(:kyw)";
 
     // Chuẩn bị câu lệnh SQL
     $stmt = $conn->prepare($sql);

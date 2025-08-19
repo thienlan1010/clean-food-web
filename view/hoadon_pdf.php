@@ -10,6 +10,8 @@ $ngaydat = $info_hd[0]['DH_NGAYDAT'] ?? date('Y-m-d');
 $phigiao = $info_hd[0]['PG_DONGIA'] ?? 0;
 $diem_dadung = $info_hd[0]['DH_DIEMDADUNG'] ?? 0;
 $diemcong = $info_hd[0]['DH_DIEMCONG'] ?? 0;
+
+
 $html = '
 <style>
     body { font-family: DejaVu Sans, sans-serif; font-size: 13px; }
@@ -103,7 +105,8 @@ if (file_exists($qr_full_path)) {
     $qr_base64 = base64_encode(file_get_contents($qr_full_path));
     $html .= "<p style='text-align:center; margin-top:30px;'>
                 <strong>Quét mã QR để tích điểm:</strong><br>
-                <img src='data:image/png;base64,$qr_base64' width='120'>
+                <img src='data:image/png;base64,$qr_base64' width='120'><br>
+                <small>Hạn QR: 3 ngày từ ngày giao</small>
               </p>";
 }
 

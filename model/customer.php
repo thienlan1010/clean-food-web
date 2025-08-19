@@ -508,14 +508,55 @@ function get_tt(){
     return $result;
 }
 //cập nhật trạng thái đơn hàng
-function update_stutas_order($madh, $trangthai){ 
+// function update_stutas_order($madh, $trangthai){ 
+//     $conn = ketnoidb();
+//     // Ghi vào bảng lịch sử trạng thái
+//     $sql = "INSERT INTO lich_su_don_hang (DH_MADH, TT_MATT)
+//              VALUES (:madh, :trangthai)";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->execute([':madh' => $madh, ':trangthai' => $trangthai]);
+// }
+function update_stutas_order($madh, $trangthai,$trangthai_cu) {
     $conn = ketnoidb();
-    // Ghi vào bảng lịch sử trạng thái
+
+    // 1. Ghi vào bảng lịch sử trạng thái
     $sql = "INSERT INTO lich_su_don_hang (DH_MADH, TT_MATT)
-             VALUES (:madh, :trangthai)";
+            VALUES (:madh, :trangthai)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([':madh' => $madh, ':trangthai' => $trangthai]);
+
+    // 2. Nếu trạng thái là 'Giao thành công' thì cập nhật hạn QR
+    if ($trangthai == 4) { // thay bằng mã trạng thái thực tế
+        // Lấy thời điểm vừa insert vào LSDH
+        $sql_time = "SELECT LSDH_THOIDIEM 
+                     FROM lich_su_don_hang 
+                     WHERE DH_MADH = :madh 
+                       AND TT_MATT = :trangthai
+                     ORDER BY LSDH_ID DESC LIMIT 1";
+        $stmt_time = $conn->prepare($sql_time);
+        $stmt_time->execute([':madh' => $madh, ':trangthai' => $trangthai]);
+        $row = $stmt_time->fetch(PDO::FETCH_ASSOC);
+
+        if ($row) {
+            // Tính ngày hết hạn QR = LSDH_THOIDIEM + 3 ngày
+            $expiry = date('Y-m-d H:i:s', strtotime($row['LSDH_THOIDIEM'] . ' +3 days'));
+
+            // Cập nhật vào bảng đơn hàng
+            $sql_update = "UPDATE don_hang 
+                           SET DH_HANQR = :expiry 
+                           WHERE DH_MADH = :madh";
+            $stmt_update = $conn->prepare($sql_update);
+            $stmt_update->execute([':expiry' => $expiry, ':madh' => $madh]);
+        }
+    }
+    // 3. Nếu trạng thái chuyển từ GIAO_THANH_CONG → trạng thái khác thì đặt DH_HANQR = NULL
+    if ($trangthai_cu == 'GIAO_THANH_CONG' && $trangthai != 'GIAO_THANH_CONG') {
+        $sql_update = "UPDATE don_hang SET DH_HANQR = NULL WHERE DH_MADH = :madh";
+        $stmt_update = $conn->prepare($sql_update);
+        $stmt_update->execute([':madh' => $madh]);
+    }
 }
+
 //cập nhật trạng thái nhân viên
 function update_stutas_employee($manv, $trangthai){ 
     $conn = ketnoidb(); // Kết nối cơ sở dữ liệu

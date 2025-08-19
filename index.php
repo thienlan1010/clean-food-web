@@ -1337,8 +1337,8 @@ if(isset($_GET['act'])){//nếu tồn tại biên này thì kiểm tra
                 $trangthai_cu = get_trangthai_donhang($madh); // Lấy trạng thái cũ trước khi cập nhật
                  echo "DEBUG: Trạng thái cũ: $trangthai_cu, Trạng thái mới: $trangthai<br>";
                 
-                 update_stutas_order($madh, $trangthai);
-
+                 update_stutas_order($madh, $trangthai, $trangthai_cu);
+                
                 // Nếu chuyển từ trạng thái khác → hủy (5) => cộng lại tồn kho
                 if ($trangthai == 5 && $trangthai_cu != 5) {
                     $slsp = get_all_slsp_in_dh($madh);

@@ -286,7 +286,7 @@
                             </button>
                         </form>
                     <!-- BỘ LỌC -->
-                     <p>Lộc theo danh mục</p>
+                     <p>Lọc theo danh mục</p>
                         <form method="GET" action="index.php" class="filter-form" style="margin-bottom: 15px;">
                             <input type="hidden" name="act" value="list_sp">
                             <select name="iddm" onchange="this.form.submit()" class="form-select" style="min-width: 150px;">
