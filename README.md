@@ -25,7 +25,8 @@ Developed a website to sell clean food and integrate a chatbot to consult on pro
 
 <img width="1838" height="891" alt="image" src="https://github.com/user-attachments/assets/bf508d93-44f7-4fe9-855d-549792e6514a" />
 
-📂 Project Structure
+## 📂 Project Structure
+<img width="242" height="670" alt="image" src="https://github.com/user-attachments/assets/10a02521-3268-4412-ba81-bac4b915cce8" />
 
 
 ## 🛠️ Installation
